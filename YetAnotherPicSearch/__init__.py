@@ -10,13 +10,16 @@ from .data_source import load_search_func
 load_search_func()
 
 __version__ = "2.0.10"
+
 __plugin_meta__ = PluginMetadata(
     name="图片搜索",
     description="YetAnotherPicSearch",
     usage="""
-    *   发送“搜图”指令及参数时附带或回复图片（推荐）
-    *   发送“搜图”指令及参数进入搜图模式
-    """,
+## 🔍 图片搜索
+
+- **搜图 [参数] [图片]** - 附带或回复图片进行搜图 (推荐)
+- **搜图 [参数]** - 进入搜图模式
+""".strip(),
     type="application",
     homepage="https://github.com/lgc-NB2Dev/YetAnotherPicSearch",
     config=ConfigModel,
@@ -24,5 +27,9 @@ __plugin_meta__ = PluginMetadata(
         "nonebot_plugin_waiter",
         "nonebot_plugin_alconna",
     ),
-    extra={},
+    extra={
+        "author": "lgc",
+        "version": __version__,
+        "menu_type": "一些工具",
+    },
 )
